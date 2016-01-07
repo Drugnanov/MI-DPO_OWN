@@ -8,26 +8,24 @@ import cz.fit.dpo.mvcshooter.model.modes.Mode;
 import java.util.ArrayList;
 
 /**
- * Created by simon on 6.1.16.
+ * Created by Drugnanov on 6.1.2016.
  */
-public class DoubleShootingMode implements ShootingMode
-{
-    @Override
-    public ArrayList<Missile> shoot(Cannon cannon, Mode gameMode)
-    {
-        ArrayList<Missile> missiles = new ArrayList<Missile>();
-        Missile firstMissile = gameMode.createMissile(cannon.getX(), cannon.getY(), cannon.getAngle(), cannon.getForce());
-        missiles.add(firstMissile);
-        int addedAngle = cannon.getAngle() + ModelConfig.CANNON_AIM_STEP;
-        Missile secondMissile = gameMode.createMissile(cannon.getX(), cannon.getY(), addedAngle, cannon.getForce());
-        missiles.add(secondMissile);
+public class DoubleShootingMode implements ShootingMode {
 
-        return missiles;
-    }
+  @Override
+  public ArrayList<Missile> shoot(Cannon cannon, Mode gameMode) {
+    ArrayList<Missile> missiles = new ArrayList<Missile>();
+    Missile firstMissile = gameMode.createMissile(cannon.getX(), cannon.getY(), cannon.getAngle(), cannon.getForce());
+    missiles.add(firstMissile);
+    int addedAngle = cannon.getAngle() + ModelConfig.CANNON_AIM_STEP;
+    Missile secondMissile = gameMode.createMissile(cannon.getX(), cannon.getY(), addedAngle, cannon.getForce());
+    missiles.add(secondMissile);
 
-    @Override
-    public boolean isSingle()
-    {
-        return false;
-    }
+    return missiles;
+  }
+
+  @Override
+  public boolean isSingle() {
+    return false;
+  }
 }

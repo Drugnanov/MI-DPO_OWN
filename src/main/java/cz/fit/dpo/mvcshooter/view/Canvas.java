@@ -13,32 +13,31 @@ import java.util.List;
  */
 public class Canvas extends JPanel implements ModelObserver {
 
-    GraphicsDrawer drawer = new GraphicsDrawer();
-    Model model;
+  private GraphicsDrawer drawer = new GraphicsDrawer();
+  private Model model;
 
-    public Canvas(int x, int y, int width, int height, Model model) {
-        this.model = model;
-        this.model.attach(this);
-        this.setBackground(Color.WHITE);
-        this.setDoubleBuffered(true);
-        this.setLocation(x, y);
-        this.setPreferredSize(new Dimension(width, height));
-        this.setVisible(true);
+  public Canvas(int x, int y, int width, int height, Model model) {
+    this.model = model;
+    this.model.attach(this);
+    this.setBackground(Color.WHITE);
+    this.setDoubleBuffered(true);
+    this.setLocation(x, y);
+    this.setPreferredSize(new Dimension(width, height));
+    this.setVisible(true);
+  }
+
+  @Override
+  protected void paintComponent(Graphics g) {
+    super.paintComponent(g);
+    drawer.setGraphics(g);
+    List<GameObject> all = model.getAll();
+    for (GameObject go : all) {
+      go.accept(drawer);
     }
+  }
 
-    @Override
-    public void modelUpdated() {
-        repaint();
-    }
-
-    @Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        drawer.setGraphics(g);
-
-        List<GameObject> all = model.getAll();
-        for (GameObject gameObject : all) {
-            gameObject.accept(drawer);
-        }
-    }
+  @Override
+  public void modelUpdated() {
+    repaint();
+  }
 }

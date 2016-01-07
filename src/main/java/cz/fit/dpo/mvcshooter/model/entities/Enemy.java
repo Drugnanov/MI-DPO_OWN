@@ -5,41 +5,39 @@ import cz.fit.dpo.mvcshooter.model.Visitor;
 import java.util.Random;
 
 /**
- *
  * @author Ondrej Stuchlik
  */
 public abstract class Enemy extends TimedGameObject {
-    private static final Random random = new Random();
-    
-    protected int type;
 
-    public Enemy(int x, int y) {
-        super(x, y);
-        type = random.nextInt(2);
-    }
+  private static final Random random = new Random();
 
-    public void setType(int type) {
-        this.type = type;
-    }
+  protected int type;
 
-    public void setTime(int time) {
-        this.time = time;
-    }
+  public Enemy(int x, int y) {
+    super(x, y);
+    type = random.nextInt(2);
+  }
 
-    public abstract void move();
+  public void setType(int type) {
+    this.type = type;
+  }
 
-    public abstract boolean isVisible();
+  public void setTime(int time) {
+    this.time = time;
+  }
 
-    public abstract Enemy copy();
+  public abstract void move();
 
-    @Override
-    public void accept(Visitor visitor)
-    {
-        visitor.visit(this);
-    }
+  public abstract boolean isVisible();
 
-    public int getType() {
-        return type;
-    }
+  public abstract Enemy copy();
 
+  @Override
+  public void accept(Visitor visitor) {
+    visitor.visit(this);
+  }
+
+  public int getType() {
+    return type;
+  }
 }

@@ -1,17 +1,14 @@
 package cz.fit.dpo.mvcshooter.model;
 
-import cz.fit.dpo.mvcshooter.model.entities.Cannon;
-import cz.fit.dpo.mvcshooter.model.entities.Collision;
-import cz.fit.dpo.mvcshooter.model.entities.Enemy;
-import cz.fit.dpo.mvcshooter.model.entities.Missile;
+import cz.fit.dpo.mvcshooter.model.entities.*;
 
 /**
- * Created by simon on 5.1.16.
+ * Created by Drugnanov on 6.1.2016.
  */
-public interface Visitor
-{
-    void visit(Enemy enemy);
-    void visit(Cannon enemy);
-    void visit(Missile enemy);
-    void visit(Collision enemy);
+public interface Visitor {
+  void visit(Enemy enemy);
+  void visit(Cannon enemy);
+  void visit(Missile enemy);
+  void visit(Collision enemy);
+  void visit(Score enemy);
 }

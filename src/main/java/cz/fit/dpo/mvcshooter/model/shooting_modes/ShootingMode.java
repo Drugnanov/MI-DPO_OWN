@@ -5,14 +5,13 @@ import cz.fit.dpo.mvcshooter.model.entities.Missile;
 import cz.fit.dpo.mvcshooter.model.modes.Mode;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
- * Created by simon on 6.1.16.
+ * Created by Drugnanov on 6.1.2016.
  */
-public interface ShootingMode
-{
-    ArrayList<Missile> shoot(Cannon cannon, Mode gameMode);
+public interface ShootingMode {
 
-    boolean isSingle();
+  ArrayList<Missile> shoot(Cannon cannon, Mode gameMode);
+
+  boolean isSingle();
 }

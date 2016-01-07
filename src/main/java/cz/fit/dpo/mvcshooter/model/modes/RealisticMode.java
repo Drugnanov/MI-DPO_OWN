@@ -9,15 +9,15 @@ import cz.fit.dpo.mvcshooter.model.movement.RealisticMovementImp;
  */
 public class RealisticMode implements Mode {
 
-    @Override
-    public Enemy createEnemy(int x, int y) {
-        return new FallingEnemy(x, y);
-    }
+  @Override
+  public Enemy createEnemy(int x, int y) {
+    return new FallingEnemy(x, y);
+  }
 
-    @Override
-    public Missile createMissile(int firstX, int firstY, int angle, int force) {
-        Missile missile = new Missile(firstX, firstY, angle, force);
-        missile.setMovementStrategy(new RealisticMovementImp());
-        return missile;
-    }
+  @Override
+  public Missile createMissile(int firstX, int firstY, int angle, int force) {
+    Missile missile = new Missile(firstX, firstY, angle, force);
+    missile.setMovementStrategy(new RealisticMovementImp());
+    return missile;
+  }
 }

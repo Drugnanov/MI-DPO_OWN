@@ -10,25 +10,25 @@ import cz.fit.dpo.mvcshooter.view.MainWindow;
 import javax.swing.*;
 
 /**
- * @author stue
+ * Created by Drugnanov on 6.1.2016.
  */
 public class Shooter {
 
-    private static final boolean SIMPLE_GAME_MODE = true;
+  private static final boolean SIMPLE_GAME_MODE = true;
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        Mode mode = (SIMPLE_GAME_MODE) ? new SimpleMode() : new RealisticMode();
+    Mode mode = (SIMPLE_GAME_MODE) ? new SimpleMode() : new RealisticMode();
 
-        final Model model = new Model(mode);
-        final Controller controller = new Controller(model);
+    final Model model = new Model(mode);
+    final Controller controller = new Controller(model);
 
-        SwingUtilities.invokeLater(new Runnable() {
+    SwingUtilities.invokeLater(new Runnable() {
 
-            @Override
-            public void run() {
-                new MainWindow(model, controller).setVisible(true);
-            }
-        });
-    }
+      @Override
+      public void run() {
+        new MainWindow(model, controller).setVisible(true);
+      }
+    });
+  }
 }

@@ -8,31 +8,31 @@ import cz.fit.dpo.mvcshooter.model.Visitor;
  */
 public class Collision extends TimedGameObject {
 
-    public Collision(int x, int y) {
-        super(x, y);
-        time = ModelConfig.COLLISION_LIVE_TIME;
-    }
+  public Collision(int x, int y) {
+    super(x, y);
+    time = ModelConfig.COLLISION_LIVE_TIME;
+  }
 
-    @Override
-    public void accept(Visitor visitor) {
-        visitor.visit(this);
-    }
+  @Override
+  public void accept(Visitor visitor) {
+    visitor.visit(this);
+  }
 
-    public void setTime(int time) {
-        this.time = time;
-    }
+  public void setTime(int time) {
+    this.time = time;
+  }
 
-    public void decreaseRemainingTime() {
-        this.time--;
-    }
+  public void decreaseRemainingTime() {
+    this.time--;
+  }
 
-    public boolean isVisible() {
-        return this.time >= 0;
-    }
+  public boolean isVisible() {
+    return this.time >= 0;
+  }
 
-    public Collision copy() {
-        Collision collision = new Collision(x, y);
-        collision.setTime(time);
-        return collision;
-    }
+  public Collision copy() {
+    Collision collision = new Collision(x, y);
+    collision.setTime(time);
+    return collision;
+  }
 }

@@ -1,9 +1,9 @@
 package cz.fit.dpo.mvcshooter.model;
 
 /**
- * Created by simon on 6.1.16.
+ * Created by Drugnanov on 6.1.2016.
  */
-public interface Accepting
-{
-    void accept(Visitor visitor);
+public interface Accepting {
+
+  void accept(Visitor visitor);
 }

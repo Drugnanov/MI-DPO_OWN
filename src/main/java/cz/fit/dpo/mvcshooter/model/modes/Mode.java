@@ -8,9 +8,9 @@ import cz.fit.dpo.mvcshooter.model.entities.Missile;
  */
 public interface Mode {
 
-    //create enemy
-    public Enemy createEnemy(int x, int y);
+  //create enemy
+  public Enemy createEnemy(int x, int y);
 
-    //create missile
-    public Missile createMissile(int firstX, int firstY, int angle, int force);
+  //create missile
+  public Missile createMissile(int firstX, int firstY, int angle, int force);
 }
