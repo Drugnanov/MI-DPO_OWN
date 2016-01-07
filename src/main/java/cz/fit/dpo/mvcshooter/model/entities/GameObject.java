@@ -24,6 +24,14 @@ public abstract class GameObject implements Accepting {
     return y;
   }
 
+  protected void setX(int x) {
+    this.x = x;
+  }
+
+  protected void setY(int y) {
+    this.y = y;
+  }
+
   public boolean collidesWith(GameObject anotherObject) {
     return Math.abs(this.x - anotherObject.x) < ModelConfig.COLLISION_MARGIN
         && Math.abs(this.y - anotherObject.y) < ModelConfig.COLLISION_MARGIN;

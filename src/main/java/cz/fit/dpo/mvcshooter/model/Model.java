@@ -232,7 +232,7 @@ public class Model {
   }
 
   public String getShootingMode() {
-    return cannon.getShootingMode();
+    return cannon.getShootingModeName();
   }
 
   public SavedGame saveGame() {

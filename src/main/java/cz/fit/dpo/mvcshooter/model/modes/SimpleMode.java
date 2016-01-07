@@ -2,6 +2,7 @@ package cz.fit.dpo.mvcshooter.model.modes;
 
 import cz.fit.dpo.mvcshooter.model.entities.Enemy;
 import cz.fit.dpo.mvcshooter.model.entities.Missile;
+import cz.fit.dpo.mvcshooter.model.entities.SimpleEnemy;
 import cz.fit.dpo.mvcshooter.model.movement.SimpleMovementImp;
 
 /**

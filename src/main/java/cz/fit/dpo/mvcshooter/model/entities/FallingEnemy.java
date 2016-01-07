@@ -1,7 +1,6 @@
-package cz.fit.dpo.mvcshooter.model.modes;
+package cz.fit.dpo.mvcshooter.model.entities;
 
 import cz.fit.dpo.mvcshooter.model.ModelConfig;
-import cz.fit.dpo.mvcshooter.model.entities.Enemy;
 
 /**
  * Created by Drugnanov on 6.1.2016.

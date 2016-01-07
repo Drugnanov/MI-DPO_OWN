@@ -66,4 +66,8 @@ public class Missile extends TimedGameObject {
   public void setMovementStrategy(MovementStrategy movementStrategy) {
     this.movementStrategy = movementStrategy;
   }
+
+  public MovementStrategy getMovementStrategy() {
+    return movementStrategy;
+  }
 }

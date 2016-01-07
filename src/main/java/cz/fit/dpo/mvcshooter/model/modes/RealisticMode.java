@@ -1,6 +1,7 @@
 package cz.fit.dpo.mvcshooter.model.modes;
 
 import cz.fit.dpo.mvcshooter.model.entities.Enemy;
+import cz.fit.dpo.mvcshooter.model.entities.FallingEnemy;
 import cz.fit.dpo.mvcshooter.model.entities.Missile;
 import cz.fit.dpo.mvcshooter.model.movement.RealisticMovementImp;
 

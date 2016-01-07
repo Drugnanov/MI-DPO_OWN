@@ -39,14 +39,14 @@ public class ModelConfig {
 
   // ########### enemies ##########
   public static final int ENEMY_LIVE_TIME = 60000;
-  public static final int ENEMIES_COUNT = 3;
+  public static final int ENEMIES_COUNT = 4;
 
   // ########### collisions ##########
   public static final int COLLISION_MARGIN = 20;
   public static final int COLLISION_LIVE_TIME = 500;
 
   // ########### Timers ##########
-  public static final long TIME_ADD_NEW_ENEMY = 6000;
+  public static final long TIME_ADD_NEW_ENEMY = 4500;
   public static final long TIME_SECOND = 1000;
   public static final int TIME_TICK = 20;
 

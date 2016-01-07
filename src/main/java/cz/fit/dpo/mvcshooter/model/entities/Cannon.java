@@ -84,14 +84,30 @@ public class Cannon extends GameObject {
 
   public void changeShootingMode() {
     if (shootingMode.getShootingType() == ShootingModeType.SINGLE) {
-      this.shootingMode = new DoubleShootingMode();
+      this.shootingMode = getDoubleShootingMode();
     }
     else {
-      this.shootingMode = new SingleShootingMode();
+      this.shootingMode = getSingleShootingMode();
     }
   }
 
-  public String getShootingMode() {
+  protected ShootingMode getSingleShootingMode() {
+    return new SingleShootingMode();
+  }
+
+  protected ShootingMode getDoubleShootingMode() {
+    return new DoubleShootingMode();
+  }
+
+  public String getShootingModeName() {
     return shootingMode.printName();
+  }
+
+  public void setShootingMode(ShootingMode shootingMode) {
+    this.shootingMode = shootingMode;
+  }
+
+  public ShootingMode getShootingMode() {
+    return shootingMode;
   }
 }
