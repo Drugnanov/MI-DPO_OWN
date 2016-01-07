@@ -68,10 +68,6 @@ public class Cannon extends GameObject {
     }
   }
 
-  public Missile shoot() {
-    return new Missile(x, y, force, angle);
-  }
-
   @Override
   public void accept(Visitor visitor) {
     visitor.visit(this);

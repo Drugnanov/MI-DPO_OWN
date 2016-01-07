@@ -23,10 +23,10 @@ public class MainWindow extends JFrame {
       this.setTitle("MyShooter");
       this.setResizable(false);
 
-      Dimension obrazovka = Toolkit.getDefaultToolkit().getScreenSize();
+      Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
       this.setLocation(
-          (int) (obrazovka.getWidth() / 2 - 250),
-          (int) (obrazovka.getHeight() / 2 - 250));
+          (int) (screen.getWidth() / 2 - 250),
+          (int) (screen.getHeight() / 2 - 250));
 
       this.addKeyListener(new KeyAdapter() {
         @Override

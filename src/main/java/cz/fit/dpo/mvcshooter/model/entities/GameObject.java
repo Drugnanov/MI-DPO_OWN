@@ -1,13 +1,13 @@
 package cz.fit.dpo.mvcshooter.model.entities;
 
-import cz.fit.dpo.mvcshooter.model.Accepting;
+import cz.fit.dpo.mvcshooter.model.Acceptable;
 import cz.fit.dpo.mvcshooter.model.ModelConfig;
 import cz.fit.dpo.mvcshooter.model.Visitor;
 
 /**
  * @author Ondrej Stuchlik
  */
-public abstract class GameObject implements Accepting {
+public abstract class GameObject implements Acceptable {
 
   protected int x, y;
 
