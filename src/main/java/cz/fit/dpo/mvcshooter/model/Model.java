@@ -97,7 +97,7 @@ public class Model {
           }
           catch (Exception e) {
             System.out.println("Problem with collisions." + e.getMessage());
-            e.printStackTrace();
+//            e.printStackTrace();
           }
         }
       }
