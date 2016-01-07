@@ -254,9 +254,14 @@ public class Model {
     }
     gravity = savedGame.getGravity();
     score = savedGame.getScore().copy();
+    timeTicks = savedGame.getTimeTicks();
   }
 
   public Score getScore() {
     return score;
+  }
+
+  public int getTimeTicks() {
+    return timeTicks;
   }
 }

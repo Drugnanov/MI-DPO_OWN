@@ -25,7 +25,12 @@ public class DoubleShootingMode implements ShootingMode {
   }
 
   @Override
-  public boolean isSingle() {
-    return false;
+  public ShootingModeType getShootingType() {
+    return ShootingModeType.DOUBLE;
+  }
+
+  @Override
+  public String printName() {
+    return "Double";
   }
 }

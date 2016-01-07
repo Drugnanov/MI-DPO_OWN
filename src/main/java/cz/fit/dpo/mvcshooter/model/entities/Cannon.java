@@ -5,6 +5,7 @@ import cz.fit.dpo.mvcshooter.model.Visitor;
 import cz.fit.dpo.mvcshooter.model.modes.Mode;
 import cz.fit.dpo.mvcshooter.model.shooting_modes.DoubleShootingMode;
 import cz.fit.dpo.mvcshooter.model.shooting_modes.ShootingMode;
+import cz.fit.dpo.mvcshooter.model.shooting_modes.ShootingModeType;
 import cz.fit.dpo.mvcshooter.model.shooting_modes.SingleShootingMode;
 
 import java.util.ArrayList;
@@ -82,7 +83,7 @@ public class Cannon extends GameObject {
   }
 
   public void changeShootingMode() {
-    if (shootingMode.isSingle()) {
+    if (shootingMode.getShootingType() == ShootingModeType.SINGLE) {
       this.shootingMode = new DoubleShootingMode();
     }
     else {
@@ -91,11 +92,6 @@ public class Cannon extends GameObject {
   }
 
   public String getShootingMode() {
-    if (shootingMode.isSingle()) {
-      return "single";
-    }
-    else {
-      return "multiple";
-    }
+    return shootingMode.printName();
   }
 }

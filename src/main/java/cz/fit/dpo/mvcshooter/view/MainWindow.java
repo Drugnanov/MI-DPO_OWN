@@ -13,7 +13,6 @@ import java.awt.event.KeyEvent;
  */
 public class MainWindow extends JFrame {
 
-
   public MainWindow(Model model, final Controller controller) {
     try {
       controller.setView(this);

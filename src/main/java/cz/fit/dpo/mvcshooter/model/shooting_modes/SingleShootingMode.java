@@ -16,12 +16,16 @@ public class SingleShootingMode implements ShootingMode {
     ArrayList<Missile> missiles = new ArrayList<Missile>();
     Missile missile = gameMode.createMissile(cannon.getX(), cannon.getY(), cannon.getAngle(), cannon.getForce());
     missiles.add(missile);
-
     return missiles;
   }
 
   @Override
-  public boolean isSingle() {
-    return true;
+  public ShootingModeType getShootingType() {
+    return ShootingModeType.SINGLE;
+  }
+
+  @Override
+  public String printName() {
+    return "Single";
   }
 }

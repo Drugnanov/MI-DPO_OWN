@@ -20,6 +20,7 @@ public class SavedGame {
   private List<Collision> collisions = new ArrayList<Collision>();
   private int gravity = ModelConfig.DEFAULT_GRAVITY;
   private Score score = null;
+  private int timeTicks;
 
   public SavedGame(Model model) {
     for (Enemy enemy : model.getEnemies()) {
@@ -36,6 +37,7 @@ public class SavedGame {
 
     this.gravity = model.getGravity();
     this.score = model.getScore().copy();
+    this.timeTicks = model.getTimeTicks();
   }
 
 
@@ -57,5 +59,9 @@ public class SavedGame {
 
   public Score getScore() {
     return score;
+  }
+
+  public int getTimeTicks() {
+    return timeTicks;
   }
 }

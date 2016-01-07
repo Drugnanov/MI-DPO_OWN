@@ -13,5 +13,7 @@ public interface ShootingMode {
 
   ArrayList<Missile> shoot(Cannon cannon, Mode gameMode);
 
-  boolean isSingle();
+  ShootingModeType getShootingType();
+
+  String printName();
 }
