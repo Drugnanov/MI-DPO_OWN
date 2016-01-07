@@ -52,6 +52,7 @@ public class MainWindow extends JFrame {
             + "arrows left/right     cannon force\n"
             + "page up/down        cannon angle\n"
             + "space                       shoot\n"
-            + "home/end                gravity up/down");
+            + "home/end                gravity up/down\n"
+            + "quick save/load     F6/ F8");
   }
 }
