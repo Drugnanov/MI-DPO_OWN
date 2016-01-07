@@ -44,14 +44,14 @@ public class MainWindow extends JFrame {
     }
   }
 
-  //ToDo upravit na neco vlastniho - Shobull ma cestky delsi vypis
   public void showHelp() {
     JOptionPane.showMessageDialog(this,
         "Controls: \n"
-            + "arrows up/down     cannon vertical movement\n"
+            + "arrows up/down     cannon up/down\n"
             + "arrows left/right     cannon force\n"
             + "page up/down        cannon angle\n"
             + "space                       shoot\n"
+            + "s                                change fire mode\n"
             + "home/end                gravity up/down\n"
             + "quick save/load     F6/ F8");
   }
