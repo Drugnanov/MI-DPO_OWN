@@ -23,7 +23,6 @@ public class MainWindow extends JFrame {
       this.setTitle("MyShooter");
       this.setResizable(false);
 
-      //ToDo prejmenovat
       Dimension obrazovka = Toolkit.getDefaultToolkit().getScreenSize();
       this.setLocation(
           (int) (obrazovka.getWidth() / 2 - 250),

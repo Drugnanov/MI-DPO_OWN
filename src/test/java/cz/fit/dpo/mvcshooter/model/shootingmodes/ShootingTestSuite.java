@@ -9,4 +9,5 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({DoubleShootingModeTest.class, SingleShootingModeTest.class})
 public class ShootingTestSuite {
+
 }

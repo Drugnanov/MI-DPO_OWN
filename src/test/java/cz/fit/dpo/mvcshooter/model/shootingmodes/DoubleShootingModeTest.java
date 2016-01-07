@@ -19,7 +19,7 @@ public class DoubleShootingModeTest {
   GameMode gameMode;
 
   @Before
-  public void beforeTest(){
+  public void beforeTest() {
     cannon = spy(Cannon.class);
     gameMode = mock(SimpleGameModeImp.class);
   }
@@ -29,6 +29,7 @@ public class DoubleShootingModeTest {
     ShootingMode sm = spy(DoubleShootingMode.class);
     when(gameMode.createMissile(anyInt(), anyInt(), anyInt(), anyInt())).thenReturn(mock(Missile.class));
     List<Missile> missiles = sm.shoot(cannon, gameMode);
+
     assertEquals(missiles.size(), 2);
   }
 }

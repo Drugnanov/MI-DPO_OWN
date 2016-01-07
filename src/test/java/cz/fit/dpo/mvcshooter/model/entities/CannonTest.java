@@ -18,8 +18,8 @@ public class CannonTest {
 
     Cannon cannon = spy(Cannon.class);
     cannon.setShootingMode(sm);
-    assertEquals(sm, cannon.getShootingMode());
 
+    assertEquals(sm, cannon.getShootingMode());
     assertEquals("Double", cannon.getShootingModeName());
   }
 

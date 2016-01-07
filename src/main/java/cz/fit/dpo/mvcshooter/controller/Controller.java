@@ -59,7 +59,6 @@ public class Controller {
         caretaker.loadGame(model);
         System.out.println("Game was successfully loaded");
         break;
-
       case KeyEvent.VK_F1:
         view.showHelp();
         break;

@@ -21,7 +21,7 @@ public class ModelTest {
   int count;
 
   @Before
-  public void beforeTest(){
+  public void beforeTest() {
     missiles.add(mock(Missile.class));
     missiles.add(mock(Missile.class));
     enemies.add(mock(SimpleEnemy.class));

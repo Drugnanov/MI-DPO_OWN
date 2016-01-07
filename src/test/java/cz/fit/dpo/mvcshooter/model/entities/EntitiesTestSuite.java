@@ -9,4 +9,5 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({CannonTest.class, EnemyTest.class, MissileTest.class})
 public class EntitiesTestSuite {
+
 }

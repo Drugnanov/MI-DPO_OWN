@@ -95,9 +95,9 @@ public class Model {
             enemyIter.remove();
             missileIter.remove();
           }
-          catch (Exception e) {
-            System.out.println("Problem with collisions." + e.getMessage());
-//            e.printStackTrace();
+          catch (Exception ex) {
+            ex.printStackTrace(System.err);
+            System.out.println("Problem with collisions." + ex.getMessage());
           }
         }
       }

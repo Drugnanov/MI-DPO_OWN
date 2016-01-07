@@ -31,9 +31,11 @@ public class MissileTest {
     when(realisticMovement.move(5, m)).thenReturn(coordinates);
 
     m.setMovementStrategy(realisticMovement);
+
     assertEquals(m.getMovementStrategy(), realisticMovement);
 
     m.move(5);
+
     assertEquals(coordinates.getX(), m.getX());
     assertEquals(coordinates.getY(), m.getY());
   }
