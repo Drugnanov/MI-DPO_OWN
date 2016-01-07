@@ -2,9 +2,9 @@ package cz.fit.dpo.mvcshooter;
 
 import cz.fit.dpo.mvcshooter.controller.Controller;
 import cz.fit.dpo.mvcshooter.model.Model;
-import cz.fit.dpo.mvcshooter.model.modes.Mode;
-import cz.fit.dpo.mvcshooter.model.modes.RealisticMode;
-import cz.fit.dpo.mvcshooter.model.modes.SimpleMode;
+import cz.fit.dpo.mvcshooter.model.gamemodes.GameMode;
+import cz.fit.dpo.mvcshooter.model.gamemodes.RealisticGameModeImp;
+import cz.fit.dpo.mvcshooter.model.gamemodes.SimpleGameModeImp;
 import cz.fit.dpo.mvcshooter.view.MainWindow;
 
 import javax.swing.*;
@@ -18,7 +18,7 @@ public class Shooter {
 
   public static void main(String[] args) {
 
-    Mode mode = (SIMPLE_GAME_MODE) ? new SimpleMode() : new RealisticMode();
+    GameMode mode = (SIMPLE_GAME_MODE) ? new SimpleGameModeImp() : new RealisticGameModeImp();
 
     final Model model = new Model(mode);
     final Controller controller = new Controller(model);

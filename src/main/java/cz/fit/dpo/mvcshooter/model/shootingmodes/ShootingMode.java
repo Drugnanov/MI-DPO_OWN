@@ -1,8 +1,8 @@
-package cz.fit.dpo.mvcshooter.model.shooting_modes;
+package cz.fit.dpo.mvcshooter.model.shootingmodes;
 
 import cz.fit.dpo.mvcshooter.model.entities.Cannon;
 import cz.fit.dpo.mvcshooter.model.entities.Missile;
-import cz.fit.dpo.mvcshooter.model.modes.Mode;
+import cz.fit.dpo.mvcshooter.model.gamemodes.GameMode;
 
 import java.util.ArrayList;
 
@@ -11,7 +11,7 @@ import java.util.ArrayList;
  */
 public interface ShootingMode {
 
-  ArrayList<Missile> shoot(Cannon cannon, Mode gameMode);
+  ArrayList<Missile> shoot(Cannon cannon, GameMode gameMode);
 
   ShootingModeType getShootingType();
 

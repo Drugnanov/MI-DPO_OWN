@@ -1,4 +1,4 @@
-package cz.fit.dpo.mvcshooter.model.shooting_modes;
+package cz.fit.dpo.mvcshooter.model.shootingmodes;
 
 /**
  * Created by Drugnanov on 7.1.2016.

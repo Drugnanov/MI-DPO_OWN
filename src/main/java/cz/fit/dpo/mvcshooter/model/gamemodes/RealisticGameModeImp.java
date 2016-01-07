@@ -1,4 +1,4 @@
-package cz.fit.dpo.mvcshooter.model.modes;
+package cz.fit.dpo.mvcshooter.model.gamemodes;
 
 import cz.fit.dpo.mvcshooter.model.entities.Enemy;
 import cz.fit.dpo.mvcshooter.model.entities.FallingEnemy;
@@ -8,7 +8,7 @@ import cz.fit.dpo.mvcshooter.model.movement.RealisticMovementImp;
 /**
  * Created by Drugnanov on 6.1.2016.
  */
-public class RealisticMode implements Mode {
+public class RealisticGameModeImp implements GameMode {
 
   @Override
   public Enemy createEnemy(int x, int y) {

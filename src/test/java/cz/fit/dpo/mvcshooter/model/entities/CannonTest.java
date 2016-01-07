@@ -1,8 +1,8 @@
 package cz.fit.dpo.mvcshooter.model.entities;
 
-import cz.fit.dpo.mvcshooter.model.shooting_modes.DoubleShootingMode;
-import cz.fit.dpo.mvcshooter.model.shooting_modes.ShootingMode;
-import cz.fit.dpo.mvcshooter.model.shooting_modes.SingleShootingMode;
+import cz.fit.dpo.mvcshooter.model.shootingmodes.DoubleShootingMode;
+import cz.fit.dpo.mvcshooter.model.shootingmodes.ShootingMode;
+import cz.fit.dpo.mvcshooter.model.shootingmodes.SingleShootingMode;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

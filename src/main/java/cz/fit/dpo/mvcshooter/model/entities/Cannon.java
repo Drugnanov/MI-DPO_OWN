@@ -2,11 +2,11 @@ package cz.fit.dpo.mvcshooter.model.entities;
 
 import cz.fit.dpo.mvcshooter.model.ModelConfig;
 import cz.fit.dpo.mvcshooter.model.Visitor;
-import cz.fit.dpo.mvcshooter.model.modes.Mode;
-import cz.fit.dpo.mvcshooter.model.shooting_modes.DoubleShootingMode;
-import cz.fit.dpo.mvcshooter.model.shooting_modes.ShootingMode;
-import cz.fit.dpo.mvcshooter.model.shooting_modes.ShootingModeType;
-import cz.fit.dpo.mvcshooter.model.shooting_modes.SingleShootingMode;
+import cz.fit.dpo.mvcshooter.model.gamemodes.GameMode;
+import cz.fit.dpo.mvcshooter.model.shootingmodes.DoubleShootingMode;
+import cz.fit.dpo.mvcshooter.model.shootingmodes.ShootingMode;
+import cz.fit.dpo.mvcshooter.model.shootingmodes.ShootingModeType;
+import cz.fit.dpo.mvcshooter.model.shootingmodes.SingleShootingMode;
 
 import java.util.ArrayList;
 
@@ -78,7 +78,7 @@ public class Cannon extends GameObject {
   }
 
 
-  public ArrayList<Missile> shootMissile(Mode gameMode) {
+  public ArrayList<Missile> shootMissile(GameMode gameMode) {
     return this.shootingMode.shoot(this, gameMode);
   }
 

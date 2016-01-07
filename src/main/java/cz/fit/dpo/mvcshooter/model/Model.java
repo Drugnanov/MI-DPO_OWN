@@ -1,7 +1,7 @@
 package cz.fit.dpo.mvcshooter.model;
 
 import cz.fit.dpo.mvcshooter.model.entities.*;
-import cz.fit.dpo.mvcshooter.model.modes.Mode;
+import cz.fit.dpo.mvcshooter.model.gamemodes.GameMode;
 import cz.fit.dpo.mvcshooter.saving.SavedGame;
 
 import java.time.LocalTime;
@@ -19,12 +19,16 @@ public class Model {
   private Timer timer;
   private int gravity = ModelConfig.DEFAULT_GRAVITY;
   private List<ModelObserver> observers = new ArrayList<ModelObserver>();
-  private Mode gameMode;
+  private GameMode gameMode;
   private int timeTicks = 0;
   private Score score;
 
-  public Model(Mode mode) {
+  public Model(GameMode mode) {
     this.gameMode = mode;
+    init();
+  }
+
+  private void init() {
     cannon = new Cannon();
     score = new Score(this);
     initTimer();
@@ -205,11 +209,11 @@ public class Model {
 
   public List<GameObject> getAll() {
     List<GameObject> all = new ArrayList<GameObject>();
-    all.add(cannon);
+    all.add(getCannon());
     all.addAll(getEnemies());
     all.addAll(getMissiles());
     all.addAll(getCollisions());
-    all.add(score);
+    all.add(getScore());
     return all;
   }
 
